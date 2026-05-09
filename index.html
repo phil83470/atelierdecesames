@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L'Atelier de ces âmes — Accompagnement spirituel, ressentis, synchronicités, guidances et exploration de l'ombre intérieure.">
+  <title>L' Atelier de ces âmes — Éveille ta Lumière Intérieure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --nuit:#0b0d1a;--cosmos:#141729;--indigo:#3d4a8a;--lavande:#8b9fd4;
+      --or:#c9a84c;--or-clair:#e8c96d;--texte:#d4cfe8;--texte-clair:#f0edf8;
+      --gris-doux:#6b6880;--rayon:rgba(201,168,76,0.08);
+    }
+    .footer-socials {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-socials p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--lavande);
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: var(--or);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--or-clair);
+  transform: translateY(-3px);
+  text-shadow: 0 0 8px rgba(232, 201, 109, 0.6);
+}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Raleway',sans-serif;background-color:var(--nuit);line-height:1.8;font-weight:300;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(11,13,26,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem;}
+    .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--or);letter-spacing:0.05em;text-decoration:none;}
+    .nav-links{display:flex;list-style:none;gap:0.2rem;align-items:center;}
+    .nav-links li:nth-child(1) a { --chakra-color: #ff6b6b; --chakra-bg: rgba(255, 107, 107, 0.15); } /* 1. Racine (Rouge) */
+    .nav-links li:nth-child(2) a { --chakra-color: #ffb067; --chakra-bg: rgba(255, 176, 103, 0.15); } /* 2. Sacré (Orange) */
+    .nav-links li:nth-child(3) a { --chakra-color: #fae06b; --chakra-bg: rgba(250, 224, 107, 0.15); } /* 3. Plexus (Jaune) */
+    .nav-links li:nth-child(4) a { --chakra-color: #6bcf6b; --chakra-bg: rgba(107, 207, 107, 0.15); } /* 4. Cœur (Vert) */
+    .nav-links li:nth-child(5) a { --chakra-color: #6bcfe6; --chakra-bg: rgba(107, 207, 230, 0.15); } /* 5. Gorge (Bleu) */
+    .nav-links li:nth-child(6) a { --chakra-color: #8073ff; --chakra-bg: rgba(128, 115, 255, 0.15); } /* 6. 3e Œil (Indigo) */
+    .nav-links li:nth-child(7) a { --chakra-color: #c98ced; --chakra-bg: rgba(201, 140, 237, 0.15); } /* 7. Couronne (Violet) */
+    .nav-links a{display:block;padding:0.5rem 0.8rem;color:var(--chakra-color, var(--texte));text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border-radius:4px;transition:all 0.3s ease;cursor:pointer;}
+    .nav-links a.active{text-shadow:0 0 10px var(--chakra-color, var(--or));opacity:0.9;}
+    .nav-links a:hover{background:var(--chakra-bg, var(--rayon));transform:translateY(-1px);}
+    .nav-cta{background:linear-gradient(135deg,#e63946,#bd202c);color:var(--texte-clair)!important;font-weight:600!important;border-radius:25px!important;padding:0.5rem 1.2rem!important;text-shadow:none!important;transform:none!important;}
+    .nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 5px 15px rgba(230,57,70,0.3);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;}
+    .hamburger span{width:25px;height:2px;background:var(--or);border-radius:2px;transition:0.3s;}
+    .page-section{display:none;padding-top:70px;min-height:100vh;animation:fadeIn 0.5s ease;}
+    .page-section.active{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 20% 50%,rgba(61,74,138,0.3) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(201,168,76,0.1) 0%,transparent 60%),var(--nuit);}
+    .stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 15% 25%,white 0%,transparent 100%),radial-gradient(1px 1px at 65% 15%,white 0%,transparent 100%),radial-gradient(1px 1px at 85% 70%,rgba(255,255,255,0.7) 0%,transparent 100%),radial-gradient(1px 1px at 35% 80%,rgba(255,255,255,0.5) 0%,transparent 100%),radial-gradient(1px 1px at 55% 40%,white 0%,transparent 100%),radial-gradient(1px 1px at 90% 30%,rgba(255,255,255,0.8) 0%,transparent 100%),radial-gradient(1px 1px at 10% 60%,rgba(255,255,255,0.6) 0%,transparent 100%),radial-gradient(1px 1px at 75% 85%,white 0%,transparent 100%),radial-gradient(1px 1px at 45% 55%,rgba(255,255,255,0.9) 0%,transparent 100%),radial-gradient(1px 1px at 25% 45%,rgba(255,255,255,0.4) 0%,transparent 100%);animation:scintiller 8s ease-in-out infinite alternate;}
+    @keyframes scintiller{from{opacity:0.5}to{opacity:1}}
+    .hero-content{position:relative;z-index:2;max-width:800px;padding:2rem;}
+    .hero-eyebrow{font-family:'Raleway',sans-serif;font-size:0.85rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--or);margin-bottom:1.5rem;display:block;}
+    .hero h1{position:relative;z-index:2;font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:600;line-height:1.15;margin-bottom:1.5rem;text-transform:uppercase;background:linear-gradient(90deg,#ff6b6b,#ffb067,#fae06b,#6bcf6b,#6bcfe6,#8073ff,#c98ced,#ff6b6b);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;animation:astralShimmer 8s linear infinite;}
+    .hero h1::before{content:'';position:absolute;top:50%;left:50%;width:140%;height:140%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center, rgba(128,115,255,0.25) 0%, rgba(107,207,230,0.15) 30%, rgba(201,168,76,0.1) 50%, transparent 70%);z-index:-1;filter:blur(20px);animation:pulseAstral 4s infinite alternate ease-in-out;pointer-events:none;}
+    .hero h1 em{font-style:italic;}
+    @keyframes astralShimmer{to{background-position:200% center;}}
+    @keyframes pulseAstral{0%{opacity:0.7;transform:translate(-50%,-50%) scale(0.95);}100%{opacity:1;transform:translate(-50%,-50%) scale(1.05);}}
+    .hero-intro{font-size:1.15rem;color:var(--texte);max-width:580px;margin:0 auto 2.5rem;font-weight:300;}
+    .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{display:inline-block;padding:0.9rem 2.2rem;background:linear-gradient(135deg,#e63946,#bd202c);color:var(--texte-clair);text-decoration:none;border-radius:50px;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;cursor:pointer;border:none;transition:all 0.3s ease;text-transform:uppercase;font-family:'Raleway',sans-serif;}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(230,57,70,0.4);}
+    .btn-secondary{display:inline-block;padding:0.9rem 2.2rem;background:linear-gradient(135deg,#007fff,#0059b3);color:var(--texte-clair);text-decoration:none;border-radius:50px;font-weight:500;font-size:0.9rem;letter-spacing:0.05em;cursor:pointer;border:none;transition:all 0.3s ease;text-transform:uppercase;font-family:'Raleway',sans-serif;}
+    .btn-secondary:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,127,255,0.4);}
+    .section{padding:6rem 2rem;}
+    .section-alt{background:var(--cosmos);}
+    .container{max-width:1100px;margin:0 auto;}
+    .section-header{text-align:center;margin-bottom:4rem;}
+    .section-label{display:inline-block;font-size:0.75rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--or);margin-bottom:1rem;padding:0.3rem 1rem;border:1px solid rgba(201,168,76,0.3);border-radius:20px;}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--texte-clair);margin-bottom:1rem;line-height:1.2;}
+    .section-subtitle{font-size:1.05rem;color:var(--gris-doux);max-width:600px;margin:0 auto;font-weight:300;}
+    .divider{width:60px;height:1px;background:var(--or);margin:1.5rem auto;opacity:0.6;}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:2.5rem;align-items:start;}
+    .card{background:var(--cosmos);border:1px solid rgba(201,168,76,0.15);border-radius:16px;padding:2.5rem;position:relative;overflow:hidden;}
+    .card-icon{font-size:2.5rem;color:var(--or);margin-bottom:1.5rem;display:block;}
+    .card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--texte-clair);margin-bottom:1rem;font-weight:400;}
+    .card p{color:var(--texte);font-size:0.95rem;line-height:1.7;}
+    .toc{background:var(--cosmos);border:1px solid rgba(201,168,76,0.2);border-radius:20px;padding:3rem;max-width:900px;margin:0 auto;}
+    .toc-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--or);margin-bottom:2rem;text-align:center;}
+    .toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+    .toc-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.5rem;background:rgba(61,74,138,0.15);border-radius:12px;cursor:pointer;transition:all 0.3s;text-decoration:none;color:var(--texte);border:1px solid transparent;}
+    .toc-item:hover{background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.3);color:var(--or-clair);transform:translateX(5px);}
+    .toc-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--or);opacity:0.5;min-width:30px;}
+    .toc-text strong{display:block;font-weight:500;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.08em;}
+    .toc-text span{font-size:0.8rem;color:var(--gris-doux);font-weight:300;}
+    .testimonial{border-left:3px solid var(--or);padding:2rem 2.5rem;background:var(--cosmos);border-radius:0 16px 16px 0;font-style:italic;margin:1rem 0;}
+    .testimonial p{font-size:1.05rem;color:var(--texte-clair);margin-bottom:1rem;line-height:1.8;}
+    .testimonial cite{font-style:normal;font-size:0.85rem;color:var(--or);letter-spacing:0.1em;text-transform:uppercase;}
+    .pricing-card{background:var(--cosmos);border:1px solid rgba(201,168,76,0.2);border-radius:20px;padding:3rem 2.5rem;text-align:center;transition:all 0.4s;position:relative;}
+    .pricing-card.featured{border-color:var(--or);background:linear-gradient(135deg,var(--cosmos),rgba(61,74,138,0.3));}
+    .pricing-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--or);color:var(--nuit);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.3rem 1.5rem;border-radius:20px;}
+    .pricing-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--texte-clair);margin-bottom:0.5rem;}
+    .pricing-price{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--or);font-weight:600;line-height:1;margin:1.5rem 0 0.5rem;}
+    .pricing-period{font-size:0.85rem;color:var(--gris-doux);margin-bottom:2rem;}
+    .pricing-features{list-style:none;margin:1.5rem 0 2.5rem;text-align:left;}
+    .pricing-features li{padding:0.6rem 0;color:var(--texte);font-size:0.95rem;border-bottom:1px solid rgba(201,168,76,0.08);display:flex;align-items:center;gap:0.8rem;}
+    .pricing-features li::before{content:'✦';color:var(--or);font-size:0.7rem;flex-shrink:0;}
+    .blog-card{background:var(--cosmos);border:1px solid rgba(201,168,76,0.1);border-radius:16px;overflow:hidden;transition:all 0.4s;}
+    .blog-card:hover{transform:translateY(-6px);border-color:rgba(201,168,76,0.3);}
+    .blog-card-header{height:180px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
+    .blog-card-body{padding:2rem;}
+    .blog-category{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);margin-bottom:0.8rem;}
+    .blog-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--texte-clair);margin-bottom:0.8rem;line-height:1.3;}
+    .blog-card p{color:var(--texte);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;}
+    .blog-read-more{font-size:0.8rem;color:var(--or);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;cursor:pointer;}
+    .form-group{margin-bottom:1.5rem;}
+    .form-group label{display:block;font-size:0.85rem;color:var(--or);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;}
+    .form-group input,.form-group textarea,.form-group select{width:100%;padding:1rem 1.2rem;background:var(--cosmos);border:1px solid rgba(201,168,76,0.2);border-radius:10px;color:var(--texte-clair);font-family:'Raleway',sans-serif;font-size:0.95rem;transition:border-color 0.3s;outline:none;}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--or);}
+    .form-group textarea{min-height:150px;resize:vertical;}
+    .form-group select option{background:var(--cosmos);}
+    ::placeholder{color:var(--gris-doux);opacity:0.7;}
+    .accordion-item{border:1px solid rgba(201,168,76,0.15);border-radius:12px;margin-bottom:1rem;overflow:hidden;}
+    .accordion-header{padding:1.5rem 2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--cosmos);color:var(--texte-clair);font-weight:500;transition:background 0.3s;}
+    .accordion-header:hover{background:rgba(201,168,76,0.08);}
+    .accordion-arrow{color:var(--or);transition:transform 0.3s;font-size:0.9rem;}
+    .accordion-item.open .accordion-arrow{transform:rotate(180deg);}
+    .accordion-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;background:rgba(20,23,41,0.5);padding:0 2rem;color:var(--texte);font-size:0.95rem;line-height:1.8;}
+    .accordion-item.open .accordion-body{max-height:500px;padding:1.5rem 2rem;}
+    .page-hero{padding:5rem 2rem 4rem;text-align:center;background:linear-gradient(180deg,rgba(61,74,138,0.15) 0%,transparent 100%);border-bottom:1px solid rgba(201,168,76,0.1);}
+    .page-hero-icon{font-size:4rem;display:block;margin-bottom:1.5rem;}
+    .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--texte-clair);font-weight:300;margin-bottom:1rem;}
+    .page-hero p{max-width:600px;margin:0 auto;color:var(--texte);font-size:1.05rem;}
+    .icon-list{list-style:none;}
+    .icon-list li{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(201,168,76,0.08);color:var(--texte);}
+    .icon-list li .icon{font-size:1.3rem;flex-shrink:0;margin-top:0.1rem;}
+    .exercise-box{background:linear-gradient(135deg,rgba(61,74,138,0.2),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.25);border-left:4px solid var(--or);border-radius:0 16px 16px 0;padding:2rem 2.5rem;margin:2rem 0;}
+    .exercise-box h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--or);margin-bottom:1rem;}
+    .exercise-box p,.exercise-box li{color:var(--texte);font-size:0.95rem;line-height:1.7;}
+    .exercise-box ol{padding-left:1.5rem;margin-top:0.8rem;}
+    .exercise-box li{margin-bottom:0.6rem;}
+    footer{background:#070810;border-top:1px solid rgba(201,168,76,0.15);padding:4rem 2rem 2rem;}
+    .footer-grid{max-width:1100px;margin:0 auto 3rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--or);margin-bottom:1rem;display:block;}
+    .footer-desc{color:var(--gris-doux);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;}
+    .social-links{display:flex;gap:1rem;}
+    .social-links a{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);border-radius:50%;color:var(--or);text-decoration:none;font-size:0.9rem;transition:all 0.3s;}
+    .social-links a:hover{background:var(--or);color:var(--nuit);}
+    .footer-col h4{font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--or);margin-bottom:1.5rem;}
+    .footer-col ul{list-style:none;}
+    .footer-col ul li{margin-bottom:0.8rem;}
+    .footer-col ul li a{color:var(--gris-doux);text-decoration:none;font-size:0.9rem;transition:color 0.3s;cursor:pointer;}
+    .footer-col ul li a:hover{color:var(--or-clair);}
+    .footer-info{display:flex;align-items:flex-start;gap:0.8rem;color:var(--gris-doux);font-size:0.9rem;margin-bottom:1rem;line-height:1.5;}
+    .footer-info i{color:var(--or);font-size:0.9rem;margin-top:0.2rem;flex-shrink:0;}
+    .footer-info a {
+  color: #c9a84c;
+  text-decoration: none;
+}
+    .footer-bottom{max-width:1100px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{color:var(--gris-doux);font-size:0.8rem;}
+    .footer-legal{display:flex;gap:1.5rem;}
+    .footer-legal a{color:var(--gris-doux);text-decoration:none;font-size:0.8rem;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--or);}
+    .toast{position:fixed;bottom:2rem;right:2rem;background:var(--or);color:var(--nuit);padding:1rem 2rem;border-radius:10px;font-weight:600;font-size:0.9rem;z-index:9999;transform:translateY(100px);opacity:0;transition:all 0.4s ease;}
+    .toast.show{transform:translateY(0);opacity:1;}
+    .availability-bar{background:rgba(201,168,76,0.1);border-radius:4px;height:6px;margin-top:0.5rem;overflow:hidden;}
+    .availability-fill{height:100%;background:linear-gradient(90deg,var(--or),var(--or-clair));border-radius:4px;}
+    .text-center{text-align:center;}
+    .mt-2{margin-top:2rem;}
+    .mt-3{margin-top:3rem;}
+    @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:768px){
+      .hamburger{display:flex;}
+      .nav-links{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(11,13,26,0.98);flex-direction:column;padding:2rem;gap:0.5rem;border-bottom:1px solid rgba(201,168,76,0.2);}
+      .nav-links.open{display:flex;}
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;text-align:center;}
+      .section{padding:4rem 1.5rem;}
+      .toc{padding:2rem 1.5rem;}
+      .grid-2{grid-template-columns:1fr;}
+    }
+    
+    /* Lightbox Styles */
+    .lightbox { display: none; position: fixed; z-index: 10000; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(11,13,26,0.95); backdrop-filter: blur(5px); opacity: 0; transition: opacity 0.3s ease; }
+    .lightbox.show { display: flex; align-items: center; justify-content: center; opacity: 1; }
+    .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90vh; border-radius: 8px; box-shadow: 0 0 40px rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4); transform: scale(0.95); transition: transform 0.3s ease; }
+    .lightbox.show .lightbox-content { transform: scale(1); }
+    .lightbox-close { position: absolute; top: 20px; right: 35px; color: var(--or); font-size: 40px; font-weight: 300; transition: 0.3s; cursor: pointer; background: none; border: none; }
+    .lightbox-close:hover, .lightbox-close:focus { color: var(--texte-clair); text-decoration: none; cursor: pointer; transform: scale(1.1); }
+    .lightbox-caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: var(--texte-clair); padding: 15px 0; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo">✦ L' Atelier de ces âmes</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#page-accueil" onclick="showPage('accueil')" class="active" id="nav-accueil">Accueil</a></li>
+      <li><a href="#page-apropos" onclick="showPage('apropos')" id="nav-apropos">À propos</a></li>
+      <li><a href="#page-ressentis" onclick="showPage('ressentis')" id="nav-ressentis">Ressentis</a></li>
+      <li><a href="#page-synchronicites" onclick="showPage('synchronicites')" id="nav-synchronicites">Synchronicités</a></li>
+      <li><a href="#page-guidances" onclick="showPage('guidances')" id="nav-guidances">Guidances</a></li>
+      <li><a href="#page-ombre" onclick="showPage('ombre')" id="nav-ombre">L'Ombre</a></li>
+      <li><a href="#page-accompagnements" onclick="showPage('accompagnements')" id="nav-accompagnements">Accompagnements</a></li>
+      <li><a href="#page-contact" onclick="showPage('contact')" id="nav-contact" class="nav-cta">Réserver</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE ACCUEIL -->
+<section class="page-section active" id="page-accueil">
+  <div class="hero" style="gap: 2rem; flex-wrap: wrap;">
+    <div class="stars"></div>
+    <section class="hero-image-left" style="flex: 1; display: flex; justify-content: center;">
+     <img src="images/IMG_20260412_120153.jpg" alt="Nathalie Anne Suzan" style="width:100%;max-width:540px;aspect-ratio:3/4;border-radius:20px;border:1px solid rgba(201,168,76,0.3);box-shadow:0 15px 40px rgba(0,0,0,0.4);object-fit:cover;">
+    </section>
+    <div class="hero-content" style="flex: 1; min-width: 300px;">
+      <span class="hero-eyebrow">✦ Bienvenue dans ton sanctuaire intérieur ✦</span>
+      <style>
+        @keyframes floatAstral { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(4deg); } 100% { transform: translateY(0px) rotate(0deg); } }
+        @keyframes magicSparkle { 0% { left: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+      </style>
+      <div class="title-wrapper" style="position:relative; display:inline-block; padding: 1.5rem 2.5rem 2.5rem; margin-bottom: 0.5rem; z-index:10;">
+        
+        <!-- Décors Astraux en arrière-plan du titre -->
+        <div class="celestial-bodies" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; pointer-events:none;">
+          <!-- Planète (Type Saturne) -->
+          <svg style="position:absolute; top:8%; left:-5%; width:50px; height:50px; opacity:0.85; animation: floatAstral 6s infinite ease-in-out;" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="18" fill="url(#planet-grad)"/>
+            <ellipse cx="50" cy="50" rx="36" ry="8" fill="none" stroke="#e8c96d" stroke-width="2" transform="rotate(-15 50 50)"/>
+            <defs>
+              <linearGradient id="planet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fae06b"/><stop offset="100%" stop-color="#ffb067"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          <!-- Lune Créscent -->
+          <svg style="position:absolute; bottom:20%; right:-10%; width:40px; height:40px; opacity:0.8; animation: floatAstral 8s infinite ease-in-out reverse;" viewBox="0 0 100 100">
+            <path d="M 60 10 A 40 40 0 1 0 90 80 A 30 30 0 1 1 60 10 Z" fill="#8b9fd4"/>
+          </svg>
+          
+          <!-- Constellation -->
+          <svg style="position:absolute; top:-5%; right:15%; width:100px; height:100px; opacity:0.65; animation: floatAstral 12s infinite ease-in-out;" viewBox="0 0 100 100">
+            <polyline points="10,30 30,60 70,40 90,80" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 4"/>
+            <circle cx="10" cy="30" r="2.5" fill="#fff" style="animation: scintiller 2s infinite alternate;"/>
+            <circle cx="30" cy="60" r="3" fill="#e8c96d" style="animation: scintiller 3s infinite alternate;"/>
+            <circle cx="70" cy="40" r="2" fill="#fff" style="animation: scintiller 2.5s infinite alternate;"/>
+            <circle cx="90" cy="80" r="3" fill="#6bcfe6" style="animation: scintiller 1.5s infinite alternate;"/>
+          </svg>
+        </div>
+
+        <!-- Le Titre (Z-index élevé pour ressortir) -->
+        <h1 style="margin-bottom:0 !important; z-index:2; position:relative;">L'Atelier<br><em>de ces âmes</em></h1>
+        
+        <!-- Soulignement Baguette Magique -->
+        <div class="magic-wand-line" style="position:absolute; bottom:1.2rem; left:50%; transform:translateX(-50%); width:80%; height:2px; background:linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.3) 20%, #fff 50%, rgba(201,168,76,0.3) 80%, transparent 100%); border-radius:50%; filter:drop-shadow(0 0 8px #c9a84c); z-index:3;">
+          <div style="position:absolute; top:-3.5px; left:0; width:9px; height:9px; background:#fff; border-radius:50%; box-shadow:0 0 12px #fff, 0 0 24px #e8c96d; animation: magicSparkle 5s infinite ease-in-out;"></div>
+          <!-- Petites étoiles volatiles dispersées -->
+          <div style="position:absolute; top:-12px; left:25%; font-size:12px; color:#fff; animation: scintiller 1.2s infinite alternate;">✦</div>
+          <div style="position:absolute; top:8px; left:75%; font-size:9px; color:#fae06b; animation: scintiller 1.8s infinite alternate;">✦</div>
+          <div style="position:absolute; top:20px; left:45%; font-size:7px; color:#c98ced; animation: scintiller 2.5s infinite alternate;">✦</div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="showPage('accompagnements')">Découvrir mes accompagnements</button>
+        <button class="btn-secondary" onclick="showPage('ressentis')">Explorer les ressentis</button>
+      </div>
+    </div>
+    <section class="hero-image-right" style="flex: 1; display: flex; justify-content: center;">
+     <img src="images/mes_amours.jpg" alt="Nathalie Anne Suzan" style="width:100%;max-width:540px;aspect-ratio:3/4;border-radius:20px;border:1px solid rgba(201,168,76,0.3);box-shadow:0 15px 40px rgba(0,0,0,0.4);object-fit:cover;">
+    </section>
+    </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Navigation</span>
+        <h2 class="section-title">Explore le site</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Chaque espace a été pensé pour t'accompagner à ton rythme, là où tu en es.</p>
+      </div>
+      <div class="toc">
+        <p class="toc-title">✦ Table des matières ✦</p>
+        <div class="toc-grid">
+          <a class="toc-item" onclick="showPage('apropos')"><span class="toc-num">01</span><div class="toc-text"><strong>À propos</strong><span>Qui suis-je, mon chemin, ma vision</span></div></a>
+          <a class="toc-item" onclick="showPage('ressentis')"><span class="toc-num">02</span><div class="toc-text"><strong>Ressentis & Intuition</strong><span>Comprendre et accueillir ce qui vibre en toi</span></div></a>
+          <a class="toc-item" onclick="showPage('synchronicites')"><span class="toc-num">03</span><div class="toc-text"><strong>Synchronicités & Signes</strong><span>Reconnaître les messages de l'univers</span></div></a>
+          <a class="toc-item" onclick="showPage('guidances')"><span class="toc-num">04</span><div class="toc-text"><strong>Guidances intérieures</strong><span>Écouter, recevoir, faire confiance</span></div></a>
+          <a class="toc-item" onclick="showPage('ombre')"><span class="toc-num">05</span><div class="toc-text"><strong>Accueillir l'Ombre</strong><span>Regarder ses peurs sans se juger</span></div></a>
+          <a class="toc-item" onclick="showPage('accompagnements')"><span class="toc-num">06</span><div class="toc-text"><strong>Accompagnements</strong><span>Séances, ateliers et ressources</span></div></a>
+          <a class="toc-item" onclick="showPage('contact')"><span class="toc-num">07</span><div class="toc-text"><strong>Contact & Réservation</strong><span>Prendre rendez-vous, poser une question</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ce que tu trouveras ici</span>
+        <h2 class="section-title">Un espace pour cheminer</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-3">
+        <div class="card"><span class="card-icon">🌙</span><h3>Ressentis & Intuition</h3><p>Tu as peut-être l'habitude d'ignorer ce que ton corps te dit. Ici, tu apprendras à écouter ces messages subtils qui viennent de ton intérieur.</p></div>
+        <div class="card"><span class="card-icon">✨</span><h3>Synchronicités & Signes</h3><p>Ces coïncidences troublantes qui ne ressemblent à rien d'ordinaire... Apprends à les reconnaître et à comprendre ce qu'elles te montrent.</p></div>
+        <div class="card"><span class="card-icon">🌑</span><h3>Apprivoiser l'Ombre</h3><p>Ces parts de toi que tu préfères ne pas regarder... Ce site t'invite à les accueillir avec douceur, sans jugement, pour te libérer.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Ce qu'ils en disent</span>
+        <h2 class="section-title">Témoignages</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="grid-2">
+        <div class="testimonial"><p>« J'avais des ressentis depuis des années mais je les ignorais, me disant que j'étais "trop sensible". Grâce à cet accompagnement, j'ai appris que cette sensibilité est une force. Tout a changé. »</p><cite>— Camille, 38 ans, Lyon</cite></div>
+        <div class="testimonial"><p>« Les synchronicités avaient commencé à se multiplier dans ma vie et je ne savais pas quoi en faire. Maintenant je comprends le langage de mon âme. Merci infiniment. »</p><cite>— Marc, 45 ans, Paris</cite></div>
+      </div>
+      <div class="text-center mt-3"><button class="btn-primary" onclick="showPage('accompagnements')">Je veux un accompagnement</button></div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE À PROPOS -->
+<section class="page-section" id="page-apropos">
+  <div class="page-hero">
+    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:2rem;">
+      <!-- Aile Gauche -->
+      <svg viewBox="0 0 100 100" style="width:85px; height:85px; transform:scaleX(-1); margin-right:-15px; filter:drop-shadow(0 0 8px rgba(201,168,76,0.4)); overflow:visible; z-index:1; position:relative;">
+        <defs>
+          <linearGradient id="wing-grad-l" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="var(--or-clair)"/>
+            <stop offset="100%" stop-color="#9d7a2c"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,25 C-10,40 -10,70 0,85 Z" fill="url(#wing-grad-l)"/>
+        <path d="M0,25 C30,5 70,-5 95,5 C70,10 40,20 0,35 Z" fill="url(#wing-grad-l)"/>
+        <path d="M0,35 C30,20 65,15 85,25 C60,30 30,40 0,50 Z" fill="url(#wing-grad-l)"/>
+        <path d="M0,50 C25,40 55,40 70,50 C50,55 25,60 0,65 Z" fill="url(#wing-grad-l)"/>
+        <path d="M0,65 C20,55 40,60 55,70 C35,72 20,72 0,75 Z" fill="url(#wing-grad-l)"/>
+        <path d="M0,75 C10,70 25,72 35,80 C25,82 10,80 0,85 Z" fill="url(#wing-grad-l)"/>
+      </svg>
+
+      <!-- Médaillon Cœur -->
+      <div style="position:relative; width:160px; height:160px; display:flex; justify-content:center; align-items:center; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.6)); z-index:10;">
+        <!-- Contour or fileté -->
+        <svg viewBox="0 0 100 100" style="position:absolute; width:100%; height:100%; z-index:2; pointer-events:none; filter:drop-shadow(0 2px 5px rgba(0,0,0,0.4));">
+          <path d="M 50 90 C 10 65, 5 45, 5 30 C 5 5, 45 5, 50 25 C 55 5, 95 5, 95 30 C 95 45, 90 65, 50 90 Z" fill="none" stroke="var(--or-clair)" stroke-width="2.5" />
+          <path d="M 50 90 C 10 65, 5 45, 5 30 C 5 5, 45 5, 50 25 C 55 5, 95 5, 95 30 C 95 45, 90 65, 50 90 Z" fill="none" stroke="#604510" stroke-width="3.5" stroke-dasharray="2 4" />
+        </svg>
+        <!-- Image masquée -->
+        <svg viewBox="0 0 100 100" style="position:absolute; width:100%; height:100%; z-index:1;">
+          <defs>
+            <clipPath id="heart-clip">
+              <path d="M 50 90 C 10 65, 5 45, 5 30 C 5 5, 45 5, 50 25 C 55 5, 95 5, 95 30 C 95 45, 90 65, 50 90 Z" />
+            </clipPath>
+          </defs>
+          <image href="images/infinie.jpg" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#heart-clip)" />
+        </svg>
+      </div>
+
+      <!-- Aile Droite -->
+      <svg viewBox="0 0 100 100" style="width:85px; height:85px; margin-left:-15px; filter:drop-shadow(0 0 8px rgba(201,168,76,0.4)); overflow:visible; z-index:1; position:relative;">
+        <defs>
+          <linearGradient id="wing-grad-r" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="var(--or-clair)"/>
+            <stop offset="100%" stop-color="#9d7a2c"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,25 C-10,40 -10,70 0,85 Z" fill="url(#wing-grad-r)"/>
+        <path d="M0,25 C30,5 70,-5 95,5 C70,10 40,20 0,35 Z" fill="url(#wing-grad-r)"/>
+        <path d="M0,35 C30,20 65,15 85,25 C60,30 30,40 0,50 Z" fill="url(#wing-grad-r)"/>
+        <path d="M0,50 C25,40 55,40 70,50 C50,55 25,60 0,65 Z" fill="url(#wing-grad-r)"/>
+        <path d="M0,65 C20,55 40,60 55,70 C35,72 20,72 0,75 Z" fill="url(#wing-grad-r)"/>
+        <path d="M0,75 C10,70 25,72 35,80 C25,82 10,80 0,85 Z" fill="url(#wing-grad-r)"/>
+      </svg>
+    </div>
+    <h1>À propos — Nathalie Anne Suzan</h1>
+    <p>Du diamant brut à la lumière : mon chemin de transmutation</p>
+  </div>
+
+  <!-- TABLE DES MATIÈRES -->
+  <section class="section" style="padding-bottom:2rem;">
+    <div class="container">
+      <div class="toc">
+        <p class="toc-title">✦ Sommaire de cette page ✦</p>
+        <div class="toc-grid">
+          <a class="toc-item" onclick="scrollToAnchor('ap-qui-suis-je')"><span class="toc-num">01</span><div class="toc-text"><strong>Qui suis-je ?</strong><span>Le diamant brut et la fleur de lotus</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-mission')"><span class="toc-num">02</span><div class="toc-text"><strong>Ma Mission</strong><span>Être un instrument de la Source</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-chemin')"><span class="toc-num">03</span><div class="toc-text"><strong>Mon Chemin</strong><span>De l'ombre des maux à la clarté des mots</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-meditation')"><span class="toc-num">04</span><div class="toc-text"><strong>La Méditation</strong><span>Une hygiène de l'âme</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-héliot')"><span class="toc-num">05</span><div class="toc-text"><strong>Héliot</strong><span>L'éveil par le subtil</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-individuation')"><span class="toc-num">06</span><div class="toc-text"><strong>L'Individuation</strong><span>Le prix de la lumière</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-intuition')"><span class="toc-num">07</span><div class="toc-text"><strong>L'Intuition</strong><span>Au-delà du genre et de l'ego</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-creatrice')"><span class="toc-num">08</span><div class="toc-text"><strong>Créatrice Libre</strong><span>Art, musique et expression canalisée</span></div></a>
+          <a class="toc-item" onclick="scrollToAnchor('ap-parcours')"><span class="toc-num">09</span><div class="toc-text"><strong>Formation & Expérience</strong><span>Les fondations de mon accompagnement</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 · QUI SUIS-JE -->
+  <section class="section section-alt" id="ap-qui-suis-je">
+    <div class="container">
+      <div style="max-width:820px;margin:0 auto;">
+        <span class="section-label">01 — Identité</span>
+        <h2 class="section-title" style="text-align:left;font-size:2rem;">Du Diamant Brut à la Lumière</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Je m'appelle <strong style="color:var(--texte-clair);">Nathalie Anne Suzan</strong>. Mon parcours n'est pas celui d'une vie épargnée, mais celui d'une vie alchimisée. Longtemps, je me suis sentie comme le "vilain petit canard", inadaptée à un monde dont je ne partageais ni les codes, ni le fonctionnement. Entre une enfance solitaire et un <strong style="color:var(--texte-clair);">handicap visuel</strong> qui m'a peu à peu retiré l'accès à la lecture classique, j'ai dû apprendre à voir autrement.</p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Aujourd'hui, je ne regarde plus en arrière avec amertume. Chaque épreuve, chaque blessure, chaque rencontre difficile a été un ciseau venant tailler le diamant brut que je suis. Comme la fleur de lotus qui plonge chaque soir dans la boue pour renaître éclatante au matin, j'ai transformé mes ombres en une force sereine.</p>
+        <div class="testimonial" style="margin-top:2rem;">
+          <p>"Je suis née pour cela. Mon âme a choisi ce rôle de pont entre les mondes, pour transformer la souffrance en une douceur qui soigne."</p>
+          <cite>— Nathalie Anne Suzan</cite>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-mission')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>Ma Mission</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 02 · MA MISSION -->
+  <section class="section" id="ap-mission">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="section-label">02 — Mission</span>
+          <h2 class="section-title" style="text-align:left;font-size:2rem;">Être un instrument de la Source</h2>
+          <div class="divider" style="margin-left:0;"></div>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Depuis 2022, mon chemin a pris une nouvelle dimension. Je vis ce que j'appelle une "douce malédiction", une magie que je ne peux arrêter : je suis <strong style="color:var(--texte-clair);">canalisée 24h/24</strong>. Je ne suis qu'un instrument, un canal entre l'Univers (ou la Source, selon votre sensibilité) et ceux qui cherchent la lumière.</p>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Ma solitude est celle d'une louve : choisie, protectrice et libre. Elle me permet de rester à l'écoute des murmures du monde, de l'amour des animaux, de la Terre et des planètes. Accompagnée par mes guides, notamment mes grands-parents <strong style="color:var(--texte-clair);">Anna et Georges</strong>, je dédie mon existence à alléger le cœur de ceux qui croisent ma route.</p>
+          <p style="color:var(--texte);line-height:1.9;">Je me définis volontiers comme une "VRP de la guérison karmique". À travers L'Atelier de ces Âmes, je mets mon corps, ma voix et mes intuitions au service de ceux qui souffrent.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:1.5rem;margin-bottom:1.5rem;">Ce que je vous offre</h3>
+          <div class="card" style="margin-bottom:1.2rem;padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">👂</span><h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Une écoute vibratoire</h3><p style="font-size:0.9rem;">Depuis l'enfance, on vient me confier ses peines. Je recueille vos douleurs pour vous permettre de repartir le cœur plus léger.</p></div>
+          <div class="card" style="margin-bottom:1.2rem;padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">🕊️</span><h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Une parole authentique</h3><p style="font-size:0.9rem;">Ce que je transmets est le fruit d'une conscientisation profonde et d'un quotidien dédié à la guidance — pas des théories de livres.</p></div>
+          <div class="card" style="padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">🌿</span><h3 style="font-size:1.05rem;margin-bottom:0.5rem;">Un espace de liberté</h3><p style="font-size:0.9rem;">Si mes mots résonnent en vous, ce message est le vôtre. Sinon, laissez-le s'envoler. Ici, seul compte ce qui parle à votre âme.</p></div>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-chemin')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>Mon Chemin</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 03 · MON CHEMIN -->
+  <section class="section section-alt" id="ap-chemin">
+    <div class="container">
+      <div style="max-width:820px;margin:0 auto;">
+        <span class="section-label">03 — Parcours de vie</span>
+        <h2 class="section-title" style="text-align:left;font-size:2rem;">De l'ombre des maux à la clarté des mots</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Il y a trois ans, mon chemin a croisé celui de la méditation. Non pas celle que l'on imagine parfois — robotisée, cherchant à chasser les nuages noirs — mais une méditation de pleine conscience et d'accueil total. J'ai commencé sur une simple chaise, les yeux ouverts, à accueillir mes larmes, mon passé et cette petite fille intérieure qui ne demandait qu'à être entendue.</p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Mon corps a longtemps été ma prison. Entre la <strong style="color:var(--texte-clair);">spondylarthrite ankylosante</strong>, l'<strong style="color:var(--texte-clair);">aponévrose plantaire</strong> et la <strong style="color:var(--texte-clair);">maladie de Crohn</strong>, j'ai connu l'enfer de l'immobilité et de la souffrance. À chaque tentative de me soigner par la chimie traditionnelle, mon âme disait "non" par des réactions violentes. Le message était clair : <em style="color:var(--or);">« Ne mets pas un couvercle sur ta souffrance. Réveille-toi. »</em></p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">J'ai compris que je devais vivre cette douleur pour pouvoir, un jour, comprendre celle des autres. On ne peut guider véritablement que les sentiers que l'on a soi-même foulés.</p>
+        <p style="color:var(--texte-clair);line-height:1.9;font-weight:500;margin-bottom:1.5rem;">C'est au cœur de ce silence méditatif que j'ai posé un ultimatum à l'Univers : la fin ou la vie. L'Univers a choisi la Vie.</p>
+        <p style="color:var(--texte);line-height:1.9;">Aujourd'hui, les vibrations que je ressens et les connexions que j'entretiens avec mes guides (dont le <strong style="color:var(--texte-clair);">Maître Hilarion</strong> 🕊️) ne sont pas de simples concepts ésotériques : ce sont les outils de ma reconstruction.</p>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-meditation')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>La Méditation</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 04 · LA MÉDITATION -->
+  <section class="section" id="ap-meditation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 — Pratique</span>
+        <h2 class="section-title">La Méditation : un Rendez-vous entre Ombre et Lumière</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Simple, car elle ne demande rien. Exigeante, car elle demande la discipline de s'asseoir, matin et soir, face au silence.</p>
+      </div>
+      
+      <div class="grid-2" style="margin-bottom: 4rem;">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:1.5rem;margin-bottom:1.5rem;">Une hygiène de l'âme</h3>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">C'est dans ce silence — sans musique, pour rester à l'écoute du corps et du cœur — que naissent les intuitions, l'écriture intuitive et ces pépites d'idées indispensables à mon cheminement.</p>
+          <div class="testimonial" style="margin-bottom:0;">
+            <p>"La méditation est bien plus qu'un moment avec soi-même ; c'est un acte de respect envers la Vie."</p>
+          </div>
+        </div>
+        <div style="align-self: end;">
+          <div class="exercise-box" style="margin-top:0; margin-bottom:0;">
+            <h4>✦ Accueillir l'Enfant Intérieur</h4>
+            <p>Pendant longtemps, mes méditations ont été peuplées de pleurs — ma « petite fille intérieure » qui exprimait enfin une tristesse étouffée. Aujourd'hui, je l'ai accueillie. En méditant, nous entrons dans <strong>l'instant divin de la réparation</strong>, libérés des blessures karmiques et des conditionnements hérités.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:2rem;margin-bottom:1rem;">Mes Ancres Spirituelles</h3>
+        <p class="section-subtitle">Trois présences qui accompagnent mon silence et mon éveil au quotidien.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="padding:2rem 1.5rem; text-align:center;">
+          <div style="width:220px; height:220px; margin:0 auto 1.5rem; border-radius:50%; border:3px solid rgba(201,168,76,0.3); padding:5px; box-shadow:0 15px 30px rgba(0,0,0,0.4);">
+            <img src="images/endroit-meditation.jpg" alt="Mon espace de méditation" style="width:100%; height:100%; border-radius:50%;">
+          </div>
+          <h3 style="font-size:1.3rem;color:#e8c96d;margin-bottom:0.8rem;">Le Sanctuaire</h3>
+          <p style="font-size:0.95rem;color:var(--texte);line-height:1.6;">Mon espace sacré. C'est ici que chaque matin je nettoie ma psyché des résidus de la nuit, et que le soir, je me libère des interactions de la journée dans l'accueil absolu.</p>
+        </div>
+        <div class="card" style="padding:2rem 1.5rem; text-align:center;">
+          <div style="width:220px; height:220px; margin:0 auto 1.5rem; border-radius:50%; border:3px solid rgba(201,168,76,0.3); padding:5px; box-shadow:0 15px 30px rgba(0,0,0,0.4);">
+            <img src="images/bouddha.jpg" alt="Bouddha" style="width:100%; height:100%; border-radius:50%;">
+          </div>
+          <h3 style="font-size:1.3rem;color:#e8c96d;margin-bottom:0.8rem;">L'Éveil</h3>
+          <p style="font-size:0.95rem;color:var(--texte);line-height:1.6;">Sous le regard paisible du Bouddha, j'apprends la pleine conscience. Son énergie m'aide à demeurer dans l'instant présent et à contempler la vie avec clarté.</p>
+        </div>
+        <div class="card" style="padding:2rem 1.5rem; text-align:center;">
+          <div style="width:220px; height:220px; margin:0 auto 1.5rem; border-radius:50%; border:3px solid rgba(201,168,76,0.3); padding:5px; box-shadow:0 15px 30px rgba(0,0,0,0.4);">
+            <img src="images/ganesh.jpg" alt="Ganesh" style="width:100%; height:100%; border-radius:50%;">
+          </div>
+          <h3 style="font-size:1.3rem;color:#e8c96d;margin-bottom:0.8rem;">Le Protecteur</h3>
+          <p style="font-size:0.95rem;color:var(--texte);line-height:1.6;">Ganesh, le destructeur d'obstacles. Sa force bienveillante m'accompagne pour traverser les épreuves, fluidifier les énergies bloquées et ouvrir de nouvelles voies.</p>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-héliot')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>Héliot</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 05 · Héliot -->
+  <section class="section section-alt" id="ap-héliot">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <span class="section-label">05 — L'Éveil</span>
+          <h2 class="section-title" style="text-align:left;font-size:2rem;">Héliot — L'Éveil par le Subtil</h2>
+          <div class="divider" style="margin-left:0;"></div>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Tout a commencé par un basculement. À cette époque, mon petit Yorkshire, <strong style="color:var(--texte-clair);">Héliot</strong>, était à mes côtés. Aujourd'hui, il a rejoint l'autre plan, mais il reste mon guide, mon "canonisé" du quotidien.</p>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Héliot n'avait aucune éducation canine classique, mais il possédait une guidance divine : il s'arrêtait devant une boutique, marquait l'arrêt, et m'indiquait précisément l'objet ou la rencontre dont j'avais besoin pour avancer.</p>
+          <p style="color:var(--texte);line-height:1.9;">C'est aussi à cette période que les signes sont devenus concrets. Ma rue s'était transformée en une véritable volière : des plumes magnifiques tourbillonnaient comme de la neige. C'était le message de mon "staff" invisible — Archanges, Maîtres Ascensionnés, défunts : <em style="color:var(--or);">"Nous sommes là, c'est l'heure."</em></p>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div style="text-align:center;max-width:360px;">
+            <img src="images/heliot-bebe.png" alt="Héliot bébé" style="width:100%;aspect-ratio:4/5;border-radius:20px;border:1px solid rgba(201,168,76,0.3);box-shadow:0 15px 40px rgba(0,0,0,0.4);object-fit:cover;margin-bottom:1.5rem;">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--or-clair);font-style:italic;line-height:1.6;">"Mon petit Héliot, depuis son départ dans l'au-delà est devenu un de mes guides invisible."</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-individuation')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>L'Individuation</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 06 · INDIVIDUATION -->
+  <section class="section" id="ap-individuation">
+    <div class="container">
+      <div style="max-width:820px;margin:0 auto;">
+        <span class="section-label">06 — Transformation</span>
+        <h2 class="section-title" style="text-align:left;font-size:2rem;">La Solitude Sacrée — L'Individuation</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Pour renaître, j'ai dû tout quitter. Mon mariage, mes certitudes, mon cercle social. Je suis entrée dans ce que <strong style="color:var(--texte-clair);">Carl Jung</strong> appelle l'individuation. Mes guides m'ont mise à l'écart du monde pour mieux me modeler.</p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Pendant cette période, j'ai appris le respect de soi. J'ai dû affronter toutes les blessures — de l'abandon à la trahison — pour les transformer. L'univers s'est même joué de mes yeux : un "G" dans l'œil gauche, un "O" dans le droit. <em style="color:var(--or);">"GO"</em>. Le signal du départ vers ma mission de vie était donné.</p>
+      </div>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="card" style="padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">📚</span><h3 style="font-size:1rem;">Les épreuves comme enseignants</h3><p style="font-size:0.88rem;">La famille et les épreuves sont des enseignants en 5D. Chaque blessure peut être alchimisée pour devenir un outil de service.</p></div>
+        <div class="card" style="padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">🪞</span><h3 style="font-size:1rem;">Le respect de soi</h3><p style="font-size:0.88rem;">Se respecter, c'est parfois sourire à l'autre tout en lui fermant sa porte. La haine et la souffrance se muent en Amour Inconditionnel.</p></div>
+        <div class="card" style="padding:1.5rem;"><span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">🔑</span><h3 style="font-size:1rem;">Des clés forgées dans le réel</h3><p style="font-size:0.88rem;">Je ne vous propose pas des théories issues des livres, mais des clés forgées dans la réalité de la guérison vécue.</p></div>
+      </div>
+      <div class="testimonial" style="margin-top:2rem;max-width:820px;margin-left:auto;margin-right:auto;">
+        <p>"Le Cantique ne s'offre pas à celui qui craint le vide, mais à celui qui a accepté de mourir à lui-même pour devenir le canal de l'invisible."</p>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-intuition')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>L'Intuition</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 07 · INTUITION -->
+  <section class="section section-alt" id="ap-intuition">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">07 — Philosophie</span>
+        <h2 class="section-title">L'Intuition : Au-delà du Genre et de l'Ego</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">L'intuition n'est pas une exclusivité féminine ; c'est une faculté universelle propre au vivant.</p>
+      </div>
+      <div class="grid-2">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:1.4rem;margin-bottom:1.2rem;">1. Le nettoyage intérieur</h3>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1.5rem;">Tant que l'esprit est embrumé par la plainte ou le rôle de victime (le fameux <strong style="color:var(--texte-clair);">Triangle de Karpman</strong>), l'intuition reste inaudible. Il faut admettre, sans jugement, qu'elle exige un esprit clair. Sans ce nettoyage, il est impossible de distinguer la voix du cœur du brouhaha du système égotique.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:1.4rem;margin-bottom:1.2rem;">2. Intuition vs Système Égotique</h3>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">L'intuition est <strong style="color:var(--texte-clair);">fulgurante, simple et immédiate</strong>. C'est l'élan d'avouer ses sentiments ou de lancer un projet audacieux. C'est là que le duel commence :</p>
+          <ul class="icon-list">
+            <li><span class="icon" style="color:var(--or);">✦</span><div><strong style="color:var(--texte-clair);">L'Intuition</strong> — L'élan pur, le premier signal.</div></li>
+            <li><span class="icon">⚙️</span><div><strong style="color:var(--texte-clair);">L'Ego</strong> — La roue de hamster qui s'emballe et injecte la peur : "je ne suis pas assez bien", "je vais perdre de l'argent"...</div></li>
+          </ul>
+        </div>
+        <div>
+          <div class="exercise-box">
+            <h4>✦ La règle d'or</h4>
+            <p style="font-size:1.05rem;color:var(--texte-clair);font-style:italic;margin-bottom:1rem;">"La première impulsion est la bonne. Tout le reste appartient à la poubelle mentale."</p>
+            <p>Il ne s'agit pas de diaboliser l'ego — il est le Yin de notre Yang. Mais il ne doit pas diriger le navire. En suivant l'intuition, on ne risque au fond qu'une chose : <strong>vivre.</strong></p>
+          </div>
+          <div class="card" style="margin-top:1.5rem;padding:1.8rem;">
+            <span class="card-icon" style="font-size:1.6rem;margin-bottom:0.8rem;">⚖️</span>
+            <h3 style="font-size:1.05rem;margin-bottom:0.8rem;">L'Équilibre et le Risque</h3>
+            <p style="font-size:0.9rem;">Le pire des scénarios n'est qu'un "rendez-vous manqué". Un refus permet au moins de tourner la page et de rester sur son chemin, plutôt que de s'épuiser dans l'immobilisme d'une roue de hamster.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:2rem;"><a class="toc-item" onclick="scrollToAnchor('ap-creatrice')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>Créatrice Libre</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 08 · CRÉATRICE LIBRE -->
+  <section class="section" id="ap-creatrice">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">08 — Expression</span>
+        <h2 class="section-title">Portrait d'une Créatrice Libre</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Entre Ciel et Terre — art médiumnique, musique sacrée et accompagnement chamanique.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(61,74,138,0.1),rgba(201,168,76,0.08));border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--or-clair);border-radius:0 16px 16px 0;padding:2.5rem;margin-bottom:2rem;">
+        <div class="grid-2">
+          <div>
+            <span style="display:inline-block;font-size:0.75rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--or);margin-bottom:1rem;">Mon univers</span>
+            <h2 style="font-family:'Cormorant Garamond',serif;color:var(--or-clair);font-size:2rem;margin-bottom:1.5rem;font-weight:400;line-height:1.2;">La gardienne des espaces sacrés</h2>
+            <p style="color:var(--texte);line-height:1.8;margin-bottom:1rem;">J'œuvre comme <strong style="color:var(--texte-clair);">guide spirituelle</strong> et <strong style="color:var(--texte-clair);">chamane astrale</strong>. Profondément connectée aux mondes subtils, j'accompagne les âmes dans leurs passages, leurs guérisons et leurs révélations intérieures.</p>
+            <p style="color:var(--texte);line-height:1.8;">Mon univers relie l'art, le son et le spirituel pour créer des espaces où chacun peut se sentir vu, entendu et honoré dans sa vérité.</p>
+          </div>
+          <div>
+            <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(201,168,76,0.15);">
+              <h4 style="font-family:'Cormorant Garamond',serif;color:var(--texte-clair);font-size:1.3rem;margin-bottom:1rem;"><span style="color:var(--or);margin-right:0.5rem;">🎨</span> Poésie illustrée & Art médiumnique</h4>
+              <div style="display:flex; flex-wrap:wrap; gap:1.2rem; align-items:start;">
+                <img src="images/atelier-dessin.jpg" alt="Atelier de dessin" style="width: 160px; object-fit:cover; border-radius:12px; border:1px solid rgba(201,168,76,0.3); box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:zoom-in;" onclick="openLightbox(this.src, this.alt)">
+                <p style="color:var(--texte);font-size:0.95rem;line-height:1.6; flex:1; min-width:200px; margin:0;">Chaque texte naît d'un ressenti profond et s'accompagne d'un dessin réalisé avec ce que la vie met entre mes mains (crayons, maquillage, pigments). J'allie tradition et modernité via des <strong style="color:var(--texte-clair);">QR codes</strong> pour donner vie à mes poésies — un pont entre les générations.</p>
+              </div>
+            </div>
+            <div>
+              <h4 style="font-family:'Cormorant Garamond',serif;color:var(--texte-clair);font-size:1.3rem;margin-bottom:1rem;"><span style="color:var(--or);margin-right:0.5rem;">🎵</span> Le Joyeux Tambourinaire</h4>
+              <div style="display:flex; flex-wrap:wrap; gap:1.2rem; align-items:start;">
+                <img src="images/tambourin_galoubet.jpg" alt="Tambourin et galoubet" style="width:200px; object-fit:cover; border-radius:12px; border:1px solid rgba(201,168,76,0.3); box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:zoom-in;" onclick="openLightbox(this.src, this.alt)">
+                <img src="images/tambourin_galoubet1.jpg" alt="Tambourin et galoubet 2" style="width:200px; object-fit:cover; border-radius:12px; border:1px solid rgba(201,168,76,0.3); box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:zoom-in;" onclick="openLightbox(this.src, this.alt)">
+                <p style="color:var(--texte);font-size:0.95rem;line-height:1.6; flex:1; min-width:200px; margin:0;">Issue d'une formation classique dans le folklore provençal, j'ai choisi de briser les codes. Le <strong style="color:var(--texte-clair);">galoubet-tambourin</strong>, loin des partitions imposées, est devenu mon instrument de liberté — pratiqué à l'oreille, guidé par l'intuition, pour le partage et la joie pure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:1rem;"><a class="toc-item" onclick="scrollToAnchor('ap-parcours')" style="display:inline-flex;max-width:260px;cursor:pointer;"><span style="color:var(--or);margin-right:0.5rem;">↓</span><div class="toc-text"><strong>Formation & Expérience</strong><span>Section suivante</span></div></a></div>
+    </div>
+  </section>
+
+  <!-- 09 · FORMATION & EXPÉRIENCE -->
+  <section class="section section-alt" id="ap-parcours">
+    <div class="container">
+      <div class="section-header"><span class="section-label">09 — Parcours</span><h2 class="section-title">Formation & Expérience</h2><div class="divider"></div></div>
+      <ul class="icon-list" style="max-width:700px;margin:0 auto 3rem;">
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Psychologie jungienne & travail sur l'ombre</strong><br><span style="font-size:0.9rem;">Études des archétypes, de l'inconscient collectif et du processus d'individuation</span></div></li>
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Pratique de la méditation & pleine conscience</strong><br><span style="font-size:0.9rem;">Pratique personnelle quotidienne depuis plusieurs années</span></div></li>
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Médiumnité, chamanisme & clairsentience</strong><br><span style="font-size:0.9rem;">Développées à travers le processus de guérison karmique personnelle</span></div></li>
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Hypersensibilité & Haut Potentiel Émotionnel (HPE)</strong><br><span style="font-size:0.9rem;">Comprendre et apprivoiser son fonctionnement interne</span></div></li>
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Parcours Flamme Jumelle</strong><br><span style="font-size:0.9rem;">Accompagnement personnalisé pour les âmes en quête de leur moitié</span></div></li>
+        <li><span class="icon">✦</span><div><strong style="color:var(--texte-clair);">Folklore provençal — Galoubet & Tambourin</strong><br><span style="font-size:0.9rem;">Formation classique réinterprétée avec liberté et intuition</span></div></li>
+      </ul>
+      <div class="exercise-box text-center" style="max-width:800px;margin-left:auto;margin-right:auto;border-radius:16px;border-left:1px solid rgba(201,168,76,0.25);border-top:4px solid var(--or);">
+        <h4 style="font-size:1.4rem;margin-bottom:1.5rem;color:var(--texte-clair);">Il est l'heure de vous réveiller.</h4>
+        <p style="margin-bottom:1.5rem;">Si vous vous sentez dans cette "machine à laver" de la vie, si vous cherchez le sens derrière le chaos, je suis là pour vous aider à décoder vos propres signes et à retrouver votre souveraineté.</p>
+        <p style="color:var(--or);font-style:italic;font-size:0.95rem;margin-bottom:2rem;">"Il ne s'agit pas de juger la facilité des uns ou la complexité des autres, mais de comprendre que chaque âme voyage à son rythme. Plus le chemin est escarpé, plus la vue au sommet est vaste."</p>
+        <button class="btn-primary" onclick="showPage('contact')">Me contacter</button>
+      </div>
+      <div class="text-center mt-3">
+        <a class="toc-item" onclick="scrollToAnchor('ap-qui-suis-je')" style="display:inline-flex;max-width:260px;justify-content:center;margin:0 auto;cursor:pointer;">
+          <span style="color:var(--or);margin-right:0.5rem;">↑</span><div class="toc-text"><strong>Retour en haut</strong><span>Sommaire de la page</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- PAGE RESSENTIS -->
+<section class="page-section" id="page-ressentis">
+  <div class="page-hero"><span class="page-hero-icon">💫</span><h1>Comprendre tes Ressentis & ton Intuition</h1><p>Ce que tu ressens a une valeur. Cette voix douce en toi mérite d'être entendue.</p></div>
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="section-label">C'est quoi un ressenti ?</span>
+          <h2 class="section-title" style="text-align:left;font-size:2rem;">Cette information subtile que ton corps envoie</h2>
+          <div class="divider" style="margin-left:0;"></div>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">Un ressenti, c'est cette sensation physique ou émotionnelle qui surgit sans que tu l'aies "décidée". Un nœud à l'estomac, une chaleur dans la poitrine, un léger malaise face à une situation qui paraît pourtant normale.</p>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">Ces signaux ne sont pas le fruit de ton imagination. Ce sont des informations précieuses que ton corps — bien plus sage que ton mental rationnel — essaie de te transmettre.</p>
+          <p style="color:var(--texte);line-height:1.9;">L'intuition, c'est la faculté de percevoir quelque chose sans l'avoir analysé. Elle parle en premier, avant que la logique ne s'en mêle.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or);font-size:1.4rem;margin-bottom:1.5rem;">Exemples du quotidien</h3>
+          <div class="card" style="margin-bottom:1rem;padding:1.5rem;"><p style="font-size:0.9rem;">🌿 <strong style="color:var(--texte-clair);">Le "non" dans le ventre</strong> — Tu dois accepter quelque chose mais quelque chose dit "non" profondément. C'est un ressenti.</p></div>
+          <div class="card" style="margin-bottom:1rem;padding:1.5rem;"><p style="font-size:0.9rem;">🌿 <strong style="color:var(--texte-clair);">L'élan soudain</strong> — Tu penses soudain à appeler quelqu'un sans raison. Tu le fais. Il avait besoin de parler. C'est l'intuition.</p></div>
+          <div class="card" style="padding:1.5rem;"><p style="font-size:0.9rem;">🌿 <strong style="color:var(--texte-clair);">La gorge serrée</strong> — Face à une décision, ta gorge se serre. Ton corps te dit : "Cette direction n'est pas pour toi."</p></div>
+        </div>
+      </div>
+      <div class="exercise-box mt-3">
+        <h4>✦ Exercice : Le journal de tes ressentis</h4>
+        <p>Pendant 7 jours, prends 5 minutes le soir pour noter dans un carnet :</p>
+        <ol><li>Un moment dans la journée où tu as ressenti quelque chose de fort</li><li>Ce que tu as ressenti dans ton corps (où ? quel type de sensation ?)</li><li>Ce que ton mental en a dit</li><li>Ce que ce ressenti t'a appris sur toi ou sur la situation</li></ol>
+      </div>
+      <div class="section-header mt-3"><span class="section-label">Aller plus loin</span><h2 class="section-title">Comment cultiver son intuition ?</h2><div class="divider"></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="card-icon">🧘</span><h3>Le silence intérieur</h3><p>L'intuition parle doucement. 5 minutes de silence conscient par jour ouvrent peu à peu son canal.</p></div>
+        <div class="card"><span class="card-icon">📓</span><h3>L'écriture automatique</h3><p>Écris sans censurer. Laisse la plume courir sur le papier pendant 10 minutes, sans relire. Ce qui sort vient souvent de ta voix intérieure.</p></div>
+        <div class="card"><span class="card-icon">🌬️</span><h3>La respiration consciente</h3><p>Inspire profondément, retiens 3 secondes, expire lentement. Répète 5 fois avant une décision. Tu te recentres et entends mieux en toi.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE SYNCHRONICITÉS -->
+<section class="page-section" id="page-synchronicites">
+  <div class="page-hero"><span class="page-hero-icon">🌌</span><h1>Synchronicités & Signes de l'Univers</h1><p>Ces "coïncidences" troublantes qui portent un sens profond, pour ceux qui savent écouter.</p></div>
+  <section class="section">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto 4rem;">
+        <span class="section-label">Définition</span>
+        <h2 class="section-title" style="text-align:left;font-size:2rem;">Qu'est-ce qu'une synchronicité ?</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">C.G. Jung a nommé "synchronicité" un phénomène : deux événements sans lien de cause à effet, mais reliés par leur <strong style="color:var(--texte-clair);">signification</strong> pour la personne qui les vit.</p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">Tu penses à quelqu'un, ton téléphone sonne — c'est lui. Tu te poses une question importante et tu croises sur une affiche la phrase qui y répond.</p>
+        <p style="color:var(--texte);line-height:1.9;">Ces moments ne sont pas des "hasards". Ce sont des <em style="color:var(--or);">rendez-vous avec toi-même</em>.</p>
+      </div>
+      <div class="section-header"><span class="section-label">Les formes</span><h2 class="section-title">Comment se manifeste une synchronicité ?</h2><div class="divider"></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="card-icon">🔢</span><h3>Les nombres répétitifs</h3><p>11:11, 22:22, 333... Tu les vois partout. Ces séquences portent souvent un message d'alignement ou de confirmation.</p></div>
+        <div class="card"><span class="card-icon">🦋</span><h3>Les animaux messagers</h3><p>Un animal qui croise ta route de façon inhabituelle. Un papillon qui reste près de toi. La nature parle.</p></div>
+        <div class="card"><span class="card-icon">📖</span><h3>Les mots & phrases</h3><p>Un livre qui s'ouvre sur exactement la phrase qu'il te fallait. Une chanson à la radio qui répond à ta question du matin.</p></div>
+        <div class="card"><span class="card-icon">🌙</span><h3>Les rêves prémonitoires</h3><p>Tu rêves de quelque chose et ça se passe. Les rêves sont un canal de guidance majeur.</p></div>
+        <div class="card"><span class="card-icon">👥</span><h3>Les rencontres improbables</h3><p>Tu croises la bonne personne au bon moment. Une discussion "par hasard" qui change ta perspective.</p></div>
+        <div class="card"><span class="card-icon">💭</span><h3>La pensée matérialisée</h3><p>Tu penses à un objet, une personne, un lieu — et il apparaît dans ton environnement peu après.</p></div>
+      </div>
+      <div class="exercise-box mt-3">
+        <h4>✦ Le journal de synchronicités — comment le tenir</h4>
+        <p>Chaque fois que tu vis une synchronicité, note :</p>
+        <ol><li>La date et l'heure</li><li>Ce qui s'est passé exactement</li><li>Ce que tu pensais ou ressentais juste avant</li><li>Ce que ça t'évoque symboliquement</li><li>Le message que tu en gardes</li></ol>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE GUIDANCES -->
+<section class="page-section" id="page-guidances">
+  <div class="page-hero"><span class="page-hero-icon">🕊️</span><h1>Guidances Intérieures</h1><p>Apprendre à écouter, recevoir et faire confiance aux messages qui viennent de toi.</p></div>
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="section-label">Qu'est-ce que la guidance ?</span>
+          <h2 class="section-title" style="text-align:left;font-size:2rem;">La voix qui sait, avant même que tu saches</h2>
+          <div class="divider" style="margin-left:0;"></div>
+          <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">La guidance intérieure, c'est cette partie de toi qui a accès à une forme de sagesse plus profonde que le mental. Elle ne crie pas. Elle murmure. Elle suggère.</p>
+          <p style="color:var(--texte);line-height:1.9;">Apprendre à recevoir ses guidances, c'est apprendre à te faire confiance. C'est l'un des apprentissages les plus libérateurs qui soit.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;color:var(--or);font-size:1.4rem;margin-bottom:1.5rem;">Les canaux de réception</h3>
+          <ul class="icon-list">
+            <li><span class="icon">👁️</span><div><strong style="color:var(--texte-clair);">Clairvoyance</strong> — Tu "vois" des images, des scènes en te concentrant.</div></li>
+            <li><span class="icon">👂</span><div><strong style="color:var(--texte-clair);">Clairaudience</strong> — Tu entends une voix intérieure claire, différente de tes pensées habituelles.</div></li>
+            <li><span class="icon">❤️</span><div><strong style="color:var(--texte-clair);">Clairsentience</strong> — Tu ressens physiquement les informations dans ton corps.</div></li>
+            <li><span class="icon">💡</span><div><strong style="color:var(--texte-clair);">Claircognizance</strong> — Tu "sais" quelque chose sans savoir comment tu le sais.</div></li>
+            <li><span class="icon">🌙</span><div><strong style="color:var(--texte-clair);">Rêves lucides</strong> — Tes rêves t'apportent des réponses claires à tes questions.</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="exercise-box mt-3">
+        <h4>✦ Comment noter et interpréter ses rêves</h4>
+        <p>Place un carnet à côté de ton lit. Dès le réveil (avant de consulter ton téléphone) :</p>
+        <ol><li>Note tout ce dont tu te souviens — même des fragments, des couleurs, des émotions</li><li>Note ce que tu ressentais dans le rêve</li><li>Cherche le symbole central : que représente-t-il pour toi ?</li><li>Relie le rêve à ce que tu vis en ce moment</li><li>Ne cherche pas une "bonne" interprétation — cherche ce qui résonne</li></ol>
+      </div>
+      <div class="section-header mt-3"><span class="section-label">Le plus grand défi</span><h2 class="section-title">Oser faire confiance</h2><div class="divider"></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="card-icon">🌊</span><h3>Le doute est normal</h3><p>Ton mental va toujours questionner tes guidances. Accueille ce doute sans le laisser paralyser.</p></div>
+        <div class="card"><span class="card-icon">🔬</span><h3>Expérimente</h3><p>Commence par des petites choses. Suis une guidance mineure et observe le résultat. La confiance se construit par l'expérience.</p></div>
+        <div class="card"><span class="card-icon">📿</span><h3>Crée un rituel</h3><p>Un moment régulier de silence, de méditation ou d'écriture pour "ouvrir le canal". La régularité est plus puissante que la durée.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE L'OMBRE -->
+<section class="page-section" id="page-ombre">
+  <div class="page-hero"><span class="page-hero-icon">🌑</span><h1>Accueillir ses Peurs & ses Parts d'Ombre</h1><p>Ce n'est pas dans la lumière que l'on grandit, c'est dans le courage de regarder ses ténèbres.</p></div>
+  <section class="section">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto 4rem;">
+        <span class="section-label">Carl Gustav Jung</span>
+        <h2 class="section-title" style="text-align:left;font-size:2rem;">L'ombre : cette part de toi que tu as mise de côté</h2>
+        <div class="divider" style="margin-left:0;"></div>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">L'ombre, au sens de Jung, c'est tout ce que tu as refoulé, caché, nié en toi. Tes colères non exprimées. Tes désirs que tu juges inacceptables. Tes peurs que tu prétends ne pas avoir.</p>
+        <p style="color:var(--texte);line-height:1.9;margin-bottom:1rem;">L'ombre n'est pas mauvaise. Elle est simplement ce qui a été mis à l'écart. Et elle a besoin d'être vue, entendue, accueillie.</p>
+        <p style="color:var(--texte);line-height:1.9;">La "nuit noire de l'âme" ? C'est une invitation de l'ombre à être enfin regardée. C'est une porte.</p>
+      </div>
+      <div class="grid-2" style="margin-bottom:4rem;">
+        <div class="card">
+          <h3 style="color:var(--or);font-size:1.2rem;margin-bottom:1rem;">Pourquoi on fuit ses noirceurs</h3>
+          <ul class="icon-list" style="font-size:0.9rem;">
+            <li><span class="icon">🔸</span><div>Peur d'être "mauvais" ou "défaillant"</div></li>
+            <li><span class="icon">🔸</span><div>La société nous a appris à "être forts"</div></li>
+            <li><span class="icon">🔸</span><div>On croit qu'en ne regardant pas, ça disparaît</div></li>
+            <li><span class="icon">🔸</span><div>On a peur de ne pas s'en relever</div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="color:var(--or);font-size:1.2rem;margin-bottom:1rem;">Ce qui se passe quand on regarde</h3>
+          <ul class="icon-list" style="font-size:0.9rem;">
+            <li><span class="icon">✦</span><div>L'énergie bloquée se libère progressivement</div></li>
+            <li><span class="icon">✦</span><div>On arrête de projeter ses ombres sur les autres</div></li>
+            <li><span class="icon">✦</span><div>On devient plus entier, plus authentique</div></li>
+            <li><span class="icon">✦</span><div>La lumière intérieure grandit avec l'ombre acceptée</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-header"><span class="section-label">En pratique</span><h2 class="section-title">Comment accueillir une noirceur sans se juger ?</h2><div class="divider"></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="card-icon">👀</span><h3>Regarder sans juger</h3><p>Quand une émotion sombre monte, dis-lui : "Je te vois." Tu n'as pas à l'analyser. Juste la reconnaître suffit souvent à l'apaiser.</p></div>
+        <div class="card"><span class="card-icon">✍️</span><h3>Dialoguer par écrit</h3><p>Écris une lettre à ta peur, ta colère ou ta tristesse. Puis écris sa réponse. Ce dialogue révèle des trésors cachés.</p></div>
+        <div class="card"><span class="card-icon">🫂</span><h3>Se faire accompagner</h3><p>Certaines ombres sont trop lourdes à regarder seul. Un accompagnement bienveillant permet d'y aller avec un filet de sécurité.</p></div>
+      </div>
+      <div class="exercise-box mt-3">
+        <h4>✦ Exercice : La lettre à ton ombre</h4>
+        <p>Prends 20 minutes dans un endroit tranquille. Pense à quelque chose en toi qui te dérange ou que tu rejettes. Puis écris :</p>
+        <ol><li>"Cher(e) [nom de l'émotion/peur]..."</li><li>Dis-lui ce que tu ressens à l'idée de la voir</li><li>Demande-lui : "Qu'est-ce que tu veux que je sache ?"</li><li>Laisse venir la réponse sans la censurer</li><li>Termine par : "Je te vois, et je t'accueille."</li></ol>
+        <p style="margin-top:1rem;font-style:italic;color:var(--gris-doux);">Note : si des émotions très lourdes remontent, n'hésitez pas à vous faire accompagner par un professionnel.</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE ACCOMPAGNEMENTS -->
+<section class="page-section" id="page-accompagnements">
+  <div class="page-hero">
+    <span class="page-hero-icon">🌠</span>
+    <h1>Accompagnements & Séances</h1>
+    <p>Chaque chemin est unique. Voici comment je peux t'accompagner selon où tu en es.</p>
+    
+    <div style="max-width:750px; margin: 3rem auto 0; text-align:left; background:rgba(61,74,138,0.15); padding:2rem 2.5rem; border-radius:16px; border:1px solid rgba(201,168,76,0.15); border-left:4px solid var(--or);">
+      <h3 style="font-family:'Cormorant Garamond',serif; color:var(--or-clair); font-size:1.4rem; margin-bottom:1.5rem; text-align:center;">Nos domaines d'exploration</h3>
+      <div class="grid-2" style="gap:1rem;">
+        <ul class="icon-list" style="margin:0;">
+          <li style="border-bottom:1px solid rgba(201,168,76,0.05); padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Guérison karmique</div></li>
+          <li style="border-bottom:1px solid rgba(201,168,76,0.05); padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Développement spirituel</div></li>
+          <li style="border-bottom:none; padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Alignement énergétique</div></li>
+        </ul>
+        <ul class="icon-list" style="margin:0;">
+          <li style="border-bottom:1px solid rgba(201,168,76,0.05); padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Coaching de vie</div></li>
+          <li style="border-bottom:1px solid rgba(201,168,76,0.05); padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Thérapie de couple</div></li>
+          <li style="border-bottom:none; padding:0.6rem 0;"><span class="icon" style="color:var(--or);">✦</span><div style="color:var(--texte-clair);font-size:1rem;font-weight:400;letter-spacing:0.02em;">Accompagnement individuel</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="section-label">Mon offre</span><h2 class="section-title">Choisir ton accompagnement</h2><div class="divider"></div><p class="section-subtitle">Tous les accompagnements se font en présence, par téléphone ou par mails assez courts et rapides.</p></div>
+      
+      <div class="pricing-card featured" style="max-width:800px; margin:2rem auto 4rem; padding:3rem; border:2px solid var(--or); box-shadow:0 0 30px rgba(201,168,76,0.15);">
+        <span class="pricing-badge" style="font-size:0.9rem; padding:0.4rem 2rem;">✦ Paiement en conscience ✦</span>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--texte-clair); line-height:1.6; margin-bottom:1.5rem; text-align:center;">
+          « Mes accompagnements sont proposés en paiement en conscience. »
+        </div>
+        <div style="color:var(--texte); font-size:1.1rem; line-height:1.8; text-align:center;">
+          <p style="margin-bottom:1rem;">Chacun contribue selon ce qui lui semble juste : <strong style="color:var(--or-clair); font-weight:400;">la valeur reçue, l’impact du travail et ses moyens du moment.</strong></p>
+          <p>Cette approche repose sur la confiance, l’alignement intérieur et l’équilibre du don et du recevoir.</p>
+        </div>
+        <div style="margin-top:2.5rem; text-align:center;">
+          <button class="btn-primary" onclick="showPage('contact')">Me contacter pour réserver</button>
+        </div>
+      </div>
+
+      <div class="section-header mt-3"><span class="section-label">Questions fréquentes</span><h2 class="section-title">FAQ</h2><div class="divider"></div></div>
+      <div style="max-width:800px;margin:0 auto;">
+        <div class="accordion-item" id="acc1"><div class="accordion-header" onclick="toggleAccordion('acc1')"><span>Comment se déroule une séance ?</span><span class="accordion-arrow">▼</span></div><div class="accordion-body">Chaque séance commence par un temps d'accueil où tu partages ce qui est présent pour toi. Nous explorons ensemble ce qui ressort — par la parole, l'écriture, des exercices ou de la méditation. La séance dure 1h et se termine avec un temps de clôture.</div></div>
+        <div class="accordion-item" id="acc2"><div class="accordion-header" onclick="toggleAccordion('acc2')"><span>Faut-il avoir déjà une pratique spirituelle ?</span><span class="accordion-arrow">▼</span></div><div class="accordion-body">Absolument pas. Que tu sois complètement débutant ou avancé sur ton chemin, l'accompagnement s'adapte à toi. Le seul prérequis est une curiosité sincère et l'envie d'aller vers l'intérieur.</div></div>
+        <div class="accordion-item" id="acc3"><div class="accordion-header" onclick="toggleAccordion('acc3')"><span>Est-ce une thérapie ou un soin psychologique ?</span><span class="accordion-arrow">▼</span></div><div class="accordion-body">Non. L'accompagnement spirituel ne remplace en aucun cas un suivi psychologique ou psychiatrique. Si tu traverses une crise, je t'orienterai vers les professionnels de santé appropriés. Les deux approches peuvent très bien se compléter.</div></div>
+        <div class="accordion-item" id="acc4"><div class="accordion-header" onclick="toggleAccordion('acc4')"><span>Proposez-vous des séances en dehors de la France ?</span><span class="accordion-arrow">▼</span></div><div class="accordion-body">Oui ! Les séances en visioconférence sont accessibles depuis n'importe quel pays francophone. Nous ajustons les horaires en fonction des fuseaux horaires.</div></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- PAGE CONTACT -->
+<section class="page-section" id="page-contact">
+  <div class="page-hero">
+    <span class="page-hero-icon">✉️</span>
+    <h1>Contact & Réservation</h1>
+    <p>Pose ta question, partage ce que tu traverses, réserve ta séance. Je te répondrai sous 48h.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        
+        <div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--texte-clair);margin-bottom:2rem;">
+            Envoyer un message
+          </h2>
+
+          <form action="https://formspree.io/f/mgodnrgl" method="POST">
+            <div class="form-group">
+              <label for="prenom">Prénom & Nom</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Ex : Marie Dupont" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" placeholder="ton@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="objet">Je souhaite...</label>
+              <select id="objet" name="objet" required>
+                <option value="">— Choisir —</option>
+                <option value="Réserver une séance découverte">Réserver une séance découverte</option>
+                <option value="Démarrer un accompagnement profond">Démarrer un accompagnement profond</option>
+                <option value="Participer à un atelier groupe">Participer à un atelier groupe</option>
+                <option value="Poser une question">Poser une question</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Ton message</label>
+              <textarea id="message" name="message" placeholder="Dis-moi ce que tu traverses, ce qui t'amène ici, ce dont tu as besoin..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;">Envoyer mon message</button>
+            <p id="form-success" style="display:none;margin-top:1rem;color:#7ad7a8;">
+      Merci, ton message a bien été envoyé ✨
+    </p>
+
+    <p id="form-error" style="display:none;margin-top:1rem;color:#ff8c8c;">
+      Une erreur est survenue. Merci de réessayer.
+    </p>
+          </form>
+        </div>
+
+        <div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--texte-clair);margin-bottom:2rem;">
+            Me retrouver
+          </h2>
+
+          <div class="footer-info">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:nathalie.suzan@orange.fr">nathalie.suzan@orange.fr</a>
+          </div>
+
+          <div class="footer-info">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong style="color:var(--texte-clair);display:block;">Téléphone</strong>
+              +33 (0)6 05 32 46 10
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong style="color:var(--texte-clair);display:block;">En présentiel</strong>
+              Var<br>(adresse communiquée lors de la réservation)
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong style="color:var(--texte-clair);display:block;">Horaires</strong>
+              Disponibilités pour rendez‑vous téléphoniques à partir de 15 h, à définir ensemble, hors week‑end.
+            </div>
+          </div>
+
+          <div class="exercise-box" style="margin-top:2rem;">
+            <h4>✦ Pas de pression</h4>
+            <p>Il n'y a aucune obligation à la suite d'un premier contact. Tu peux simplement poser une question ou demander plus d'informations. Je te répondrai avec bienveillance.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">✦ L' Atelier de ces âmes</span>
+
+      <div class="footer-socials">
+  <p>Vener me rejoindre sur mes réseaux sociaux :</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/var83/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.youtube.com/@NathalieAnneSuzan/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  
+  </div>
+</div>
+      <p class="footer-desc">Un espace de spiritualité bienveillant et non-dogmatique pour explorer tes ressentis, accueillir tes synchronicités et apprivoiser tes parts d'ombre.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul><li><a href="#page-accueil" onclick="showPage('accueil')">Accueil</a></li><li><a href="#page-apropos" onclick="showPage('apropos')">À propos</a></li><li><a href="#page-ressentis" onclick="showPage('ressentis')">Ressentis & Intuition</a></li><li><a href="#page-synchronicites" onclick="showPage('synchronicites')">Synchronicités</a></li><li><a href="#page-guidances" onclick="showPage('guidances')">Guidances</a></li><li><a href="#page-ombre" onclick="showPage('ombre')">Accueillir l'Ombre</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Accompagnements</h4>
+      <ul><li><a href="#page-accompagnements" onclick="showPage('accompagnements')">Séance Découverte</a></li><li><a href="#page-accompagnements" onclick="showPage('accompagnements')">Accompagnement Profond</a></li><li><a href="#page-accompagnements" onclick="showPage('accompagnements')">Ateliers Groupe</a></li><li><a href="#page-contact" onclick="showPage('contact')">Réservation</a></li></ul>
+    </div>
+   <div class="footer-col">
+  <h4>Contact</h4>
+  <div class="footer-info">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:nathalie.suzan@orange.fr">nathalie.suzan@orange.fr</a>
+  </div>    
+  <div class="footer-info"><i class="fas fa-phone"></i>+33 (0)6 05 32 46 10</div>
+  <div class="footer-info"><i class="fas fa-clock"></i>Disponibilités pour rendez‑vous téléphoniques à partir de 15 h, à définir ensemble. Hors week‑end.</div>
+  <div class="footer-info"><i class="fas fa-map-marker-alt"></i>En présentiel-Var (adresse communiquée lors de la réservation)</div>
+  </div>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 L' Atelier de ces âmes — Tous droits réservés</p>
+    <div class="footer-legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="cgv.html">CGV</a></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✦ Message envoyé avec succès !</div>
+
+<!-- Lightbox Modal -->
+<div id="imageLightbox" class="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+  <img class="lightbox-content" id="lightboxImage">
+  <div id="lightboxCaption" class="lightbox-caption"></div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function openLightbox(src, alt) {
+    const lightbox = document.getElementById('imageLightbox');
+    const img = document.getElementById('lightboxImage');
+    const caption = document.getElementById('lightboxCaption');
+    img.src = src;
+    caption.innerText = alt || '';
+    lightbox.style.display = 'flex';
+    setTimeout(() => {
+      lightbox.classList.add('show');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(event) {
+    if (event.target.id === 'lightboxImage') return;
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.classList.remove('show');
+    setTimeout(() => {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 300);
+  }
+function showPage(pageName, preventScroll = false) {
+  document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+
+  const target = document.getElementById('page-' + pageName);
+  if (target) target.classList.add('active');
+
+  document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+
+  const activeNav = document.getElementById('nav-' + pageName);
+  if (activeNav) activeNav.classList.add('active');
+
+  const navLinks = document.getElementById('navLinks');
+  if (navLinks) navLinks.classList.remove('open');
+
+  if (!preventScroll) {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    setTimeout(() => {
+      document.documentElement.style.scrollBehavior = '';
+    }, 50);
+  }
+  }
+  
+  function scrollToAnchor(anchorId) {
+    showPage('apropos', true);
+    setTimeout(() => {
+      const el = document.getElementById(anchorId);
+      if (el) {
+        document.documentElement.style.scrollBehavior = 'auto'; // Désactive temporairement le smooth scroll css
+        const y = el.getBoundingClientRect().top + window.scrollY - 70; // 70px correspond à la hauteur de nav
+        window.scrollTo({top: y, behavior: 'instant'});
+        setTimeout(() => {
+          document.documentElement.style.scrollBehavior = ''; // Réactive le smooth scroll
+        }, 50);
+      }
+    }, 50);
+  }
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function toggleAccordion(id) {
+    const item = document.getElementById(id);
+    document.querySelectorAll('.accordion-item').forEach(el => { if (el.id !== id) el.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#page-')) {
+    const pageName = hash.replace('#page-', '');
+    showPage(pageName, true);
+  } else if (hash && hash.startsWith('#ap-')) {
+    scrollToAnchor(hash.replace('#', ''));
+  } else {
+    showPage('accueil');
+  }
+
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      const formData = {
+        prenom: document.getElementById('prenom').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        objet: document.getElementById('objet').value.trim(),
+        message: document.getElementById('message').value.trim()
+      };
+
+      if (!formData.prenom || !formData.email || !formData.objet || !formData.message) {
+        errorMsg.textContent = "Merci de remplir tous les champs.";
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      try {
+        const response = await fetch('https://formspree.io/f/xwvyrvwr', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          form.reset();
+          successMsg.style.display = 'block';
+        } else {
+          errorMsg.textContent = "L'envoi a échoué. Vérifie la configuration du formulaire.";
+          errorMsg.style.display = 'block';
+        }
+      } catch (error) {
+        errorMsg.textContent = "Impossible d'envoyer le message pour le moment.";
+        errorMsg.style.display = 'block';
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
+  
+

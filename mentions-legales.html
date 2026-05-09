@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales – L'Atelier de ces âmes</title>
+
+  <!-- Polices et Icônes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Style identique au site principal -->
+  <style>
+    :root {
+      --nuit: #0b0d1a;
+      --cosmos: #141729;
+      --indigo: #3d4a8a;
+      --lavande: #8b9fd4;
+      --or: #c9a84c;
+      --or-clair: #e8c96d;
+      --texte: #d4cfe8;
+      --texte-clair: #f0edf8;
+      --gris-doux: #6b6880;
+      --rayon: rgba(201,168,76,0.08);
+    }
+    
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--nuit);
+      color: var(--texte);
+      line-height: 1.8;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* Barre de navigation */
+    nav {
+      position:fixed; top:0; left:0; width:100%; z-index:1000;
+      background:rgba(11,13,26,0.92); backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(201,168,76,0.2); padding:0 2rem;
+    }
+    .nav-inner {
+      max-width:1300px; margin:0 auto; display:flex;
+      align-items:center; justify-content:space-between; height:70px;
+    }
+    .nav-logo {
+      font-family:'Cormorant Garamond',serif; font-size:1.5rem;
+      font-weight:600; color:var(--or); letter-spacing:0.05em; text-decoration:none;
+    }
+    .nav-links { display:flex; list-style:none; gap:0.2rem; align-items:center; }
+    .nav-links li:nth-child(1) a { --chakra-color: #ff6b6b; --chakra-bg: rgba(255, 107, 107, 0.15); }
+    .nav-links li:nth-child(2) a { --chakra-color: #ffb067; --chakra-bg: rgba(255, 176, 103, 0.15); }
+    .nav-links li:nth-child(3) a { --chakra-color: #fae06b; --chakra-bg: rgba(250, 224, 107, 0.15); }
+    .nav-links li:nth-child(4) a { --chakra-color: #6bcf6b; --chakra-bg: rgba(107, 207, 107, 0.15); }
+    .nav-links li:nth-child(5) a { --chakra-color: #6bcfe6; --chakra-bg: rgba(107, 207, 230, 0.15); }
+    .nav-links li:nth-child(6) a { --chakra-color: #8073ff; --chakra-bg: rgba(128, 115, 255, 0.15); }
+    .nav-links li:nth-child(7) a { --chakra-color: #c98ced; --chakra-bg: rgba(201, 140, 237, 0.15); }
+    .nav-links a { display:block; padding:0.5rem 0.8rem; color:var(--chakra-color, var(--texte)); text-decoration:none; font-size:0.82rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; border-radius:4px; transition:all 0.3s ease; }
+    .nav-links a:hover { background:var(--chakra-bg, var(--rayon)); transform:translateY(-1px); }
+    .nav-cta { background:linear-gradient(135deg,#e63946,#bd202c); color:var(--texte-clair)!important; font-weight:600!important; border-radius:25px!important; padding:0.5rem 1.2rem!important; text-shadow:none!important; transform:none!important; }
+    .nav-cta:hover { transform:translateY(-2px)!important; box-shadow:0 5px 15px rgba(230,57,70,0.3); }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:5px; }
+    .hamburger span { width:25px; height:2px; background:var(--or); border-radius:2px; transition:0.3s; }
+
+    /* En-tête de la page */
+    .page-hero {
+      padding: 8rem 2rem 4rem; text-align: center;
+      background: linear-gradient(180deg, rgba(61,74,138,0.15) 0%, transparent 100%);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .page-hero-icon { font-size:3rem; display:block; margin-bottom:1.5rem; color:var(--or); }
+    .page-hero h1 {
+      font-family:'Cormorant Garamond',serif; font-size:clamp(2rem, 5vw, 3.5rem);
+      color:var(--texte-clair); font-weight:300; margin-bottom:1rem;
+    }
+    .page-hero p { max-width:600px; margin:0 auto; color:var(--gris-doux); font-size:1.05rem; }
+
+    /* Contenu principal */
+    .section { padding: 4rem 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    .card {
+      background: var(--cosmos); border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem;
+      transition: border-color 0.4s ease;
+    }
+    .card:hover { border-color: rgba(201,168,76,0.3); }
+    
+    .card h2 {
+      font-family:'Cormorant Garamond',serif; font-size: 1.6rem; color: var(--or);
+      margin-bottom: 1.2rem; font-weight: 400; border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding-bottom: 0.5rem;
+    }
+    .card p { color: var(--texte); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+    .card p:last-child { margin-bottom: 0; }
+    .card strong { color: var(--texte-clair); font-weight: 500; }
+
+    /* Pied de page (Simplifié) */
+    footer {
+      background: #070810; border-top: 1px solid rgba(201,168,76,0.15); padding: 3rem 2rem;
+    }
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto; display: flex; 
+      justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { color: var(--gris-doux); font-size: 0.85rem; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a {
+      color: var(--gris-doux); text-decoration: none; font-size: 0.85rem; transition: color 0.3s;
+    }
+    .footer-legal a:hover { color: var(--or); }
+    .footer-legal a.active { color: var(--or); pointer-events: none; }
+
+    @media(max-width: 768px) {
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .card { padding: 1.5rem; }
+      .hamburger { display:flex; }
+      .nav-links { display:none; position:fixed; top:70px; left:0; right:0; background:rgba(11,13,26,0.98); flex-direction:column; padding:2rem; gap:0.5rem; border-bottom:1px solid rgba(201,168,76,0.2); }
+      .nav-links.open { display:flex; }
+    }
+    main a { color: var(--or); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+    main a:hover { color: var(--or-clair); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">✦ L' Atelier de ces âmes</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#page-accueil">Accueil</a></li>
+        <li><a href="index.html#page-apropos">À propos</a></li>
+        <li><a href="index.html#page-ressentis">Ressentis</a></li>
+        <li><a href="index.html#page-synchronicites">Synchronicités</a></li>
+        <li><a href="index.html#page-guidances">Guidances</a></li>
+        <li><a href="index.html#page-ombre">L'Ombre</a></li>
+        <li><a href="index.html#page-accompagnements">Accompagnements</a></li>
+        <li><a href="index.html#page-contact" class="nav-cta">Réserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+
+  <!-- En-tête -->
+  <div class="page-hero">
+    <span class="page-hero-icon">⚖️</span>
+    <h1>Mentions légales</h1>
+    <p>Informations juridiques concernant l'édition et l'hébergement de ce site.</p>
+  </div>
+
+  <!-- Contenu des mentions légales -->
+  <main class="section">
+    <div class="container">
+      
+      <div class="card">
+        <h2>1. Éditeur du site</h2>
+        <p>Site : <strong>L'Atelier de ces âmes – Éveille ta Lumière Intérieure</strong><br>
+        Éditeur : Nathalie-Anne SUZAN<br>
+        Statut : Site personnel en cours de création, destiné à partager des contenus autour du bien‑être et du développement personnel.<br>
+        E-mail : <a href="mailto:[EMAIL_ADDRESS]">nathalie.suzan@orange.fr</a><br></p>
+        
+        <p>Ce site est actuellement en cours de développement et n’a pas vocation, à ce stade, à proposer de services payants en ligne.</p>
+      </div>
+
+      <div class="card">
+        <h2>2. Hébergement du site</h2>
+        <p>Le site est actuellement utilisé uniquement en local (sur l’ordinateur de l’éditeur) à des fins de test et de développement.<br>
+        Les informations relatives à l’hébergeur (nom, adresse, téléphone) seront complétées lors de la mise en ligne publique du site.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. Propriété intellectuelle</h2>
+        <p>L’ensemble des contenus présents sur ce site (textes, images, illustrations, logo, nom du site, etc.) est, sauf mention contraire, la propriété exclusive de l’éditeur.</p>
+        <p>Toute reproduction, représentation, modification, diffusion ou exploitation, totale ou partielle, des contenus, par quelque procédé que ce soit, sans accord préalable écrit de l’éditeur, est interdite.</p>
+      </div>
+
+      <div class="card">
+        <h2>4. Données personnelles</h2>
+        <p>Aucune donnée personnelle n’est collectée automatiquement à ce stade d’utilisation locale du site. Si un formulaire de contact ou d’inscription est mis en place lors de la mise en ligne publique, les informations fournies seront utilisées uniquement pour répondre aux demandes des utilisateurs et ne seront pas cédées à des tiers sans consentement.</p>
+        <p>Une politique de confidentialité plus détaillée sera ajoutée lors de la mise en ligne publique du site afin de préciser les traitements de données éventuellement réalisés.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Cookies</h2>
+        <p>À ce stade de développement local, aucun cookie n’est déposé sur l’appareil de l’utilisateur autre que ceux strictement nécessaires au fonctionnement technique du navigateur.</p>
+        <p>Lors de la mise en ligne publique, si des cookies de mesure d’audience ou de services tiers sont utilisés, une bannière d’information et un dispositif de consentement seront ajoutés.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Limitation de responsabilité</h2>
+        <p>Les contenus partagés sur ce site ont pour seul objectif de proposer des pistes de réflexion et d’accompagnement autour du bien‑être, de la spiritualité et du développement personnel. Ils ne constituent en aucun cas un avis médical, psychologique, juridique ou financier.</p>
+        <p>Pour toute problématique de santé physique ou mentale, il est recommandé de consulter un professionnel de santé qualifié.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2026 L' Atelier de ces âmes — Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html" class="active">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
